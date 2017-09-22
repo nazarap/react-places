@@ -1,0 +1,105 @@
+$header-color: #07446b;
+$free-color: green;
+$high-color: red;
+$occupied-color: yellow;
+$border-color: #1f371e;
+$info-container-color: gainsboro;
+
+h1 {
+  &.main-header {
+    text-transform: uppercase;
+    color: $header-color;
+    text-align: center;
+  }
+}
+
+table {
+  margin: auto;
+  tr {
+    font-weight: 600;
+
+    th {
+      text-transform: uppercase;
+      background-color: $header-color;
+      padding: 5px 10px;
+      color: white;
+    }
+
+    td {
+      background-color: $free-color;
+      padding: 5px 10px;
+      text-align: center;
+
+      &:first-child {
+        background-color: white;
+        border: 1px solid $border-color;
+      }
+
+      &.red {
+        background-color: $high-color;
+        border: 1px solid $border-color;
+      }
+      &.yellow {
+        background-color: $occupied-color;
+        border: 1px solid $border-color;
+      }
+   }
+ }
+}
+
+section.info-container {
+  width: 30%;
+  margin: 50px auto auto auto;
+  background-color: $info-container-color;
+  padding: 0 20px 10px 20px;
+
+  div.info-box {
+    display: inline-block;
+    margin: 10px 0;
+
+    &:first-child, &:nth-child(3) {
+      width: 32%;
+    }
+
+    &:nth-child(2), &:last-child {
+      width: 68%;
+    }
+
+    div {
+      width: 30px;
+      height: 30px;
+      vertical-align: -8px;
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    &:first-child {
+      font-size: 20px;
+      div {
+        background-color: $header-color;
+      }
+    }
+    &:nth-child(2) {
+      div {
+        background-color: $occupied-color;
+      }
+    }
+    &:nth-child(3) {
+      font-size: 20px;
+      div {
+        background-color: $free-color;
+      }
+    }
+    &:last-child {
+      text-transform: uppercase;
+      div {
+        background-color: $high-color;
+      }
+    }
+
+    h3 {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+}
