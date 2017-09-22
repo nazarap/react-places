@@ -5,3 +5,5 @@ build
 *.log*
 _nogit
 todo.md
+.idea/
+.editorconfig
